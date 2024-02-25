@@ -133,3 +133,64 @@ class Airport:
     timezone = property(get_timezone, set_timezone)
     runways = property(get_runways, set_runways)
     terminals = property(get_terminals, set_terminals)
+# Create objects of the classes
+passenger = Passenger('JAMES SMITH', '06 DEC 20 11:40')
+aircraft = Aircraft('Boeing 747', 'On-time', '03', '2')
+flight = Flight('NA4321', '06 DEC 20', aircraft)
+airport = Airport('ORD', 'Chicago O\'Hare International Airport', 'USA', '-6:00', 4, 8)
+
+# Populate the objects with data
+passenger.name = 'JAMES SMITH'
+passenger.check_in_time = '06 DEC 20 11:40'
+aircraft.aircraft_type = 'Boeing 747'
+aircraft.flight_status = 'On-time'
+aircraft.gate = '03'
+aircraft.terminal = '2'
+flight.flight_number = 'NA4321'
+flight.date = '06 DEC 20'
+flight.aircraft.boarding_time = '11:20'
+flight.aircraft.departure_time = '11:40'
+flight.aircraft.seat_number = '09A'
+flight.aircraft.electronic_ticket_number = '629'
+flight.aircraft.to_city = 'NEW YORK'
+flight.aircraft.to_airport_code = 'JFK'
+flight.aircraft.arrival_time = '13:30'
+airport.airport_code = 'ORD'
+airport.airport_name = 'Chicago O\'Hare International Airport'
+airport.country = 'USA'
+airport.timezone = '-6:00'
+airport.runways = 4
+airport.terminals = 8
+
+# Display the boarding pass details
+print('NATIONAL AIRLINES')
+print('PASSENGER TICKET AND BAGGAGE CHECK')
+print(f'IN {passenger.check_in_time}')
+print()
+print(f'Passenger {passenger.name}')
+print()
+print(f'From: {airport.airport_name}, {airport.country} ({airport.airport_code})')
+print(f'Flight {flight.flight_number} {flight.date}')
+print()
+print(f'Gate {aircraft.gate}')
+print(f'Boarding till: {aircraft.boarding_time}')
+print(f'Time {aircraft.departure_time}')
+print(f'Seat {aircraft.seat_number}')
+print('BOARDING PASS')
+print(f'FIRST CLASS')
+print()
+print(f'To: {flight.aircraft.to_city} ({flight.aircraft.to_airport_code})')
+print(f'Arrival time: {flight.aircraft.arrival_time}')
+print(f'Terminal: {aircraft.terminal}')
+print('PLEASE BE AT THE GATE AT BOARDING TIME')
+print('NATIONAL AIRLINES')
+print(f'FIRST CLASS')
+print()
+print(f'Passenger {passenger.name}')
+print(f'From: {airport.airport_name}, {airport.country} ({airport.airport_code})')
+print(f'To: {flight.aircraft.to_city} ({flight.aircraft.to_airport_code})')
+print(f'Date {flight.date}')
+print(f'Gate {aircraft.gate}')
+print(f'Boarding till: {aircraft.boarding_time}')
+print(f'Time {aircraft.departure_time}')
+print(f'Seat {aircraft.seat_number}')
