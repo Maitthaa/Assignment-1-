@@ -1,1 +1,135 @@
-print('Testing the code')
+class Passenger:
+    def __init__(self, name, check_in_time):
+        self._name = name
+        self._check_in_time = check_in_time
+
+    def get_name(self):
+        return self._name
+
+    def set_name(self, value):
+        self._name = value
+
+    def get_check_in_time(self):
+        return self._check_in_time
+
+    def set_check_in_time(self, value):
+        self._check_in_time = value
+
+    name = property(get_name, set_name)
+    check_in_time = property(get_check_in_time, set_check_in_time)
+
+class Aircraft:
+    def __init__(self, aircraft_type, flight_status, gate, terminal):
+        self._aircraft_type = aircraft_type
+        self._flight_status = flight_status
+        self._gate = gate
+        self._terminal = terminal
+
+    def get_aircraft_type(self):
+        return self._aircraft_type
+
+    def set_aircraft_type(self, value):
+        self._aircraft_type = value
+
+    def get_flight_status(self):
+        return self._flight_status
+
+    def set_flight_status(self, value):
+        self._flight_status = value
+
+    def get_gate(self):
+        return self._gate
+
+    def set_gate(self, value):
+        self._gate = value
+
+    def get_terminal(self):
+        return self._terminal
+
+    def set_terminal(self, value):
+        self._terminal = value
+
+    aircraft_type = property(get_aircraft_type, set_aircraft_type)
+    flight_status = property(get_flight_status, set_flight_status)
+    gate = property(get_gate, set_gate)
+    terminal = property(get_terminal, set_terminal)
+
+class Flight:
+    def __init__(self, flight_number, date, aircraft):
+        self._flight_number = flight_number
+        self._date = date
+        self._aircraft = aircraft
+
+    def get_flight_number(self):
+        return self._flight_number
+
+    def set_flight_number(self, value):
+        self._flight_number = value
+
+    def get_date(self):
+        return self._date
+
+    def set_date(self, value):
+        self._date = value
+
+    def get_aircraft(self):
+        return self._aircraft
+
+    def set_aircraft(self, value):
+        self._aircraft = value
+
+    flight_number = property(get_flight_number, set_flight_number)
+    date = property(get_date, set_date)
+    aircraft = property(get_aircraft, set_aircraft)
+
+class Airport:
+    def __init__(self, airport_code, airport_name, country, timezone, runways, terminals):
+        self._airport_code = airport_code
+        self._airport_name = airport_name
+        self._country = country
+        self._timezone = timezone
+        self._runways = runways
+        self._terminals = terminals
+
+    def get_airport_code(self):
+        return self._airport_code
+
+    def set_airport_code(self, value):
+        self._airport_code = value
+
+    def get_airport_name(self):
+        return self._airport_name
+
+    def set_airport_name(self, value):
+        self._airport_name = value
+
+    def get_country(self):
+        return self._country
+
+    def set_country(self, value):
+        self._country = value
+
+    def get_timezone(self):
+        return self._timezone
+
+    def set_timezone(self, value):
+        self._timezone = value
+
+    def get_runways(self):
+        return self._runways
+
+    def set_runways(self, value):
+        self._runways = value
+
+    def get_terminals(self):
+        return self._terminals
+
+    def set_terminals(self, value):
+        self._terminals = value
+
+    airport_code = property(get_airport_code, set_airport_code)
+    airport_name = property(get_airport_name, set_airport_name)
+    country = property(get_country, set_country)
+    timezone = property(get_timezone, set_timezone)
+    runways = property(get_runways, set_runways)
+    terminals = property(get_terminals, set_terminals)
